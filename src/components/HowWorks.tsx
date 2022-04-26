@@ -67,6 +67,7 @@ const StepContainer = styled.div`
   width: 100%;
   justify-content: space-around;
   margin-top: 80px;
+  margin-bottom: 50px;
 `;
 const StepContent = styled.div``;
 const StepOne = styled.div`
