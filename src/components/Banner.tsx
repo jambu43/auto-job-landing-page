@@ -27,7 +27,7 @@ export default function Banner() {
             </Button>
           </Stack>
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-            <Text color={"#000"} as={"span"}>
+            <Text color={"#000"} as={"span"} style={{ fontFamily: "Recoleta" }}>
               We look for your next job, we find it and it’s 100% free!
             </Text>
           </Heading>
