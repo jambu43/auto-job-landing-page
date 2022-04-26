@@ -31,17 +31,17 @@ function Features() {
             style={{ marginBottom: "50px" }}
           >
             <Text color={"#000"} as={"span"} style={{ fontFamily: "Recoleta" }}>
-              Our Some Features
+              Les avantages
             </Text>
           </Heading>
           <StepContainer>
             <StepContent>
               <StepOne>1</StepOne>
               <StepRow>
-                <StepTitle>Automated applications.</StepTitle>
+                <StepTitle>Candidatures automatisées </StepTitle>
                 <StepDescription>
-                  Everyday, autojob automatically sends your application to the
-                  right companies
+                  Chaque jour, autojob envoie automatiquement ta candidature aux
+                  entreprises qui te correspondent.
                 </StepDescription>
               </StepRow>
             </StepContent>
@@ -49,21 +49,22 @@ function Features() {
             <StepContent>
               <StepTwo>2</StepTwo>
               <StepRow>
-                <StepTitle>Best match of offers.</StepTitle>
+                <StepTitle>Meilleure correspondance des offres</StepTitle>
                 <StepDescription>
-                  Personalized and intuitive criteria creat the best match
-                  between your professional profile and the companies offers.
+                  Les critères personnalisés et intuitifs créent le meilleur
+                  matching entre ton profil professionnel et les offres des
+                  entreprises.
                 </StepDescription>
               </StepRow>
             </StepContent>
             <StepContent>
               <StepThree>3</StepThree>
               <StepRow>
-                <StepTitle>Organization and follow applications</StepTitle>
+                <StepTitle>Organisation et suivi des candidatures </StepTitle>
                 <StepDescription>
-                  A tracking table records all the offers to which autojob
-                  applies so that you can manage the evolution of each
-                  application.
+                  Un tableau de suivi enregistre toutes les offres auxquelles
+                  autojob postule pour que tu puisses gérer l'évolution de
+                  chaque candidature.
                 </StepDescription>
               </StepRow>
             </StepContent>
@@ -87,7 +88,7 @@ const StepRow = styled.div`
   margin-left: 20px;
 `;
 const StepOne = styled.div`
-  width: 121px;
+  width: 145px;
   height: 90px;
   background: linear-gradient(154.49deg, #5ca1fe 6.61%, #217bf4 89.72%);
   box-shadow: 0px 10px 22px -2px rgba(109, 171, 255, 0.36);
@@ -121,7 +122,7 @@ const StepTwo = styled.div`
   align-items: center;
 `;
 const StepThree = styled.div`
-  width: 178px;
+  width: 197px;
   height: 90px;
   background: linear-gradient(154.49deg, #17b265 6.61%, #17b265 89.72%);
   box-shadow: 0px 10px 22px -2px rgba(23, 178, 101, 0.36);
@@ -141,7 +142,7 @@ const StepTitle = styled.div`
   font-family: "Recoleta";
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 32px;
   width: 320px;
 `;
@@ -149,7 +150,7 @@ const StepDescription = styled.p`
   font-family: "Product Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 170%;
 `;
 export default Features;
