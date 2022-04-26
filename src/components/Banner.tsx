@@ -28,12 +28,13 @@ export default function Banner() {
           </Stack>
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
             <Text color={"#000"} as={"span"} style={{ fontFamily: "Recoleta" }}>
-              We look for your next job, we find it and it’s 100% free!
+              Ton prochain job, c’est nous qui le cherchons, c'est nous qui le
+              trouvons… et c’est 100% gratuit !
             </Text>
           </Heading>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"#000"}>
-            Upload your resume and autojob will automatically apply for new jobs
-            on your behalf that match your profile.
+            Téléchargez votre CV et autojob postule automatiquement en votre nom
+            à de nouveaux emplois correspondant à votre profil.
           </Text>
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Button
@@ -45,7 +46,7 @@ export default function Banner() {
                 color: "#FFFAF9",
               }}
             >
-              Get Started Now
+              Démarrer maintenant !
             </Button>
           </Stack>
         </Stack>
