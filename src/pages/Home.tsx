@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
+import Features from "../components/Features";
 import HowWorks from "../components/HowWorks";
 import Layout from "../components/partials/Layout";
 
@@ -8,6 +9,7 @@ function Home() {
     <Layout>
       <Banner />
       <HowWorks />
+      <Features />
     </Layout>
   );
 }
