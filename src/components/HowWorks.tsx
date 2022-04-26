@@ -6,31 +6,32 @@ function HowWorks() {
   return (
     <Container maxW={"7xl"}>
       <Content>
-        <Title>How It Works</Title>
+        <Title>Comment ça marche ?</Title>
         <Description>
-          The job search process is complicated and time consuming Hundreds of
-          tools, lot’s of cutting and posting. We’ve designed a unique process
-          to help you find a job faster and with less effort.
+          Le processus de recherche d'un emploi est compliqué et prend beaucoup
+          de temps. Des centaines d'outils, beaucoup de copier-coller. Nous
+          avons conçu un processus unique pour vous permettre de trouver un
+          emploi plus rapidement et avec un minimum d'efforts.
         </Description>
 
         <StepContainer>
           <StepContent>
             <StepOne>1</StepOne>
             <StepDescription>
-              Create your profile and uplod your cv.
+              Créez votre profil et téléchargez votre CV
             </StepDescription>
           </StepContent>
           <StepContent>
             <StepTwo>2</StepTwo>
             <StepDescription>
-              Select your job titles, locations and many other optional
-              parameters.
+              Sélectionnez vos titres de poste, vos lieux de travail et bien
+              d'autres paramètres facultatifs.
             </StepDescription>
           </StepContent>
           <StepContent>
             <StepThree>3</StepThree>
             <StepDescription style={{ width: "349px" }}>
-              We will take care of the rest.
+              On s’occupe du reste…
             </StepDescription>
           </StepContent>
         </StepContainer>
