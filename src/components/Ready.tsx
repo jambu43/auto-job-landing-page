@@ -11,14 +11,20 @@ function Ready() {
     >
       <Container>
         <CircleTop />
-        <Title>Hey! You caught us before we were ready.</Title>
+        <Title>Hey ! Tu nous a surpris avant que nous soyons prêts.</Title>
         <Description>
-          We are working to finalize the platform things are progressing well
-          and we will be operational within a few days. if you want to be on the
-          First callback when we are ready, just put your phone number here :
+          Nous travaillons pour finaliser la plateforme, les choses avancent
+          bien et nous serons opérationnels d’ici quelques jours. Si tu
+          souhaites être sur le premier recevoir un rappel lorsque nous serons
+          prêts, il suffit de mettre ton adresse e-mail ici :
         </Description>
+        <FormContainer>
+          <Flag />
+          <Prefix>+243</Prefix>
+          <InputPhone type="text" maxLength={9} />
+          <Submit type="submit" />
+        </FormContainer>
         <CircleBottom />
-        <ButtonContainer></ButtonContainer>
       </Container>
     </Stack>
   );
@@ -36,13 +42,10 @@ const Title = styled.h1`
   font-family: "Recoleta";
   font-style: normal;
   font-weight: 600;
-  font-size: 50px;
+  font-size: 35px;
   line-height: 120%;
   margin: auto;
-  /* or 60px */
-
   text-align: center;
-
   color: #ffffff;
   width: 587px;
 `;
@@ -50,11 +53,12 @@ const Description = styled.p`
   font-family: "Product Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 170%;
   color: #ffffff;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px auto auto;
+  width: 45rem;
 `;
 const CircleTop = styled.div`
   width: 225px;
@@ -73,7 +77,42 @@ const CircleBottom = styled.div`
   border-radius: 50%;
   left: 1127px;
 `;
-const ButtonContainer = styled.div`
+const FormContainer = styled.div`
   display: flex;
+  justify-content: center;
+  margin-top: 30px;
 `;
+const InputPhone = styled.input`
+  padding: 15px 25px 15px 105px;
+  border-radius: 14px;
+  width: 350px;
+  margin-right: 10px;
+  color: #8a8f95;
+  font-family: "Product Sans";
+`;
+const Submit = styled.input`
+  width: 160px;
+  height: 70px;
+  background: #ffffff;
+  border-radius: 14px;
+  color: #fa5e1e;
+`;
+const Flag = styled.div`
+  height: 30px;
+  width: 30px;
+  background-image: url("../../images/rdc-flag.png");
+  background-size: cover;
+  position: absolute;
+  left: 34%;
+  margin-top: 19px;
+  border-radius: 50px;
+`;
+const Prefix = styled.span`
+  position: absolute;
+  left: 36.4%;
+  margin-top: 23px;
+  color: #8a8f95;
+  font-family: "Product Sans";
+`;
+
 export default Ready;
