@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 function HowWorks() {
   return (
-    <Container maxW={"7xl"}>
+    <Container maxW={"7xl"} id="how-works">
       <Content>
         <Title>Comment ça marche ?</Title>
         <Description>

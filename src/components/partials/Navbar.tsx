@@ -94,12 +94,12 @@ export default function Navabar() {
                 boxShadow: " 0 0 41px #0000003b",
                 padding: 15,
                 fontSize: 13,
-                width: "90px",
+                width: "auto",
                 borderRadius: "50px",
               }}
-              href="/paiement"
+              href="/#subscriptions"
             >
-              SIGN UP
+              S'enregistrer
             </Link>
           </Stack>
         </Flex>
@@ -267,23 +267,11 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Find a Job",
-    to: "#",
+    label: "Comment ça marche",
+    to: "#how-works",
   },
   {
-    label: "Companies",
-    to: "#",
-  },
-  {
-    label: "About Us",
-    to: "#",
-  },
-  {
-    label: "Post a Job",
-    to: "#",
-  },
-  {
-    label: "LOG IN",
-    to: "#",
+    label: "Les avantages",
+    to: "#features",
   },
 ];

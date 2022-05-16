@@ -8,6 +8,7 @@ function Ready() {
       minH={"30vh"}
       direction={{ base: "column", md: "row" }}
       style={{ marginTop: "50px", marginBottom: "50px" }}
+      id="subscriptions"
     >
       <Container>
         <CircleTop />

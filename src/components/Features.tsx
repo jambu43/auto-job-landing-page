@@ -16,6 +16,7 @@ function Features() {
       minH={"30vh"}
       direction={{ base: "column", md: "row" }}
       style={{ marginTop: "50px" }}
+      id="features"
     >
       <Flex flex={1}>
         <Image
