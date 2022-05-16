@@ -1,4 +1,10 @@
-import { Stack, StatUpArrow } from "@chakra-ui/react";
+import {
+  Stack,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from "@chakra-ui/react";
 import styled from "styled-components";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { useState } from "react";
@@ -11,6 +17,15 @@ function Ready() {
     fullname: "",
     phone: "",
   });
+
+  const [loader, setLoader] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isClickOn, setIsClickOn] = useState(false);
+
+  function handleClick(value: boolean) {
+    isClickOn: setIsClickOn(value);
+    console.log(!isClickOn);
+  }
 
   const handleChange = (event: any) => {
     setFormData({
@@ -28,7 +43,9 @@ function Ready() {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    console.log(formData);
+
+    handleClick(true);
+    setLoader(true);
     axios({
       method: "POST",
       url: `https://api-autojob.herokuapp.com/api/users/add`,
@@ -39,14 +56,22 @@ function Ready() {
     })
       .then((res) => {
         console.log(res.data);
+        setLoader(false);
         if (res.data.state) {
+          setMessage(`${res.data.message}`);
+          setTimeout(() => setMessage(""), 5000);
           setFormData({
             fullname: "",
             phone: "",
           });
+        } else {
+          setMessage(`${res.data.message}`);
+          setTimeout(() => setMessage(""), 5000);
         }
       })
       .catch((err) => {
+        setLoader(false);
+
         console.log("error", err);
       });
   };
@@ -67,8 +92,15 @@ function Ready() {
                 }
                 value={formData.fullname}
                 placeholder="Nom complet"
+                disabled={loader ? true : false}
+                required
               />
-              <Button colorScheme="blue" style={btn} onClick={next}>
+              <Button
+                colorScheme="blue"
+                style={btn}
+                onClick={next}
+                disabled={loader ? true : false}
+              >
                 Suivant
               </Button>
             </FormContainer>
@@ -87,18 +119,50 @@ function Ready() {
                 onChange={(e) =>
                   setFormData((prev) => ({
                     ...prev,
-                    phone: "243" + e.target.value,
+                    phone: e.target.value,
                   }))
                 }
+                disabled={loader ? true : false}
+                value={formData.phone}
+                required
               />
-              <Button className="button" style={btn} onClick={back}>
+              <Button
+                className="button"
+                style={btn}
+                onClick={back}
+                disabled={loader ? true : false}
+              >
                 Précédent
               </Button>
 
-              <Button colorScheme="blue" style={btn} onClick={handleSubmit}>
+              <Button
+                colorScheme="blue"
+                style={btn}
+                onClick={handleSubmit}
+                disabled={loader ? true : false}
+              >
+                {loader ? <i className="fa fa-spinner fa-spin"></i> : ""}
                 Valider
               </Button>
             </FormContainer>
+
+            {message ? (
+              <Alert
+                status="success"
+                style={{
+                  width: "60%",
+                  borderRadius: "14px",
+                  margin: "auto",
+                  marginTop: "20px",
+                  padding: "20px",
+                }}
+              >
+                <AlertIcon />
+                {message}
+              </Alert>
+            ) : (
+              ""
+            )}
           </>
         );
       default:
@@ -123,7 +187,6 @@ function Ready() {
           prêts, il suffit de mettre ton adresse e-mail ici :
         </Description>
         {mySwitchFunction(currentStep)}
-
         <CircleBottom />
       </Container>
     </Stack>
@@ -183,7 +246,7 @@ const FormContainer = styled.div`
   margin-top: 30px;
 `;
 const InputPhone = styled.input`
-  padding: 15px 25px 15px 95px;
+  padding: 15px 25px 15px 103px;
   border-radius: 14px;
   width: 350px;
   margin-right: 10px;
