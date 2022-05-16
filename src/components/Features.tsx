@@ -84,12 +84,14 @@ const StepContainer = styled.div`
 const StepContent = styled.div`
   display: flex;
   margin-bottom: 30px;
+  width: 100%;
 `;
 const StepRow = styled.div`
   margin-left: 20px;
+  width: 73%;
 `;
 const StepOne = styled.div`
-  width: 145px;
+  width: 27%;
   height: 90px;
   background: linear-gradient(154.49deg, #5ca1fe 6.61%, #217bf4 89.72%);
   box-shadow: 0px 10px 22px -2px rgba(109, 171, 255, 0.36);
@@ -106,7 +108,7 @@ const StepOne = styled.div`
   align-items: center;
 `;
 const StepTwo = styled.div`
-  width: 178px;
+  width: 27%;
   height: 90px;
   background: linear-gradient(154.49deg, #ff858a 6.61%, #f04148 89.72%);
   box-shadow: 0px 8px 22px -2px rgba(248, 87, 94, 0.3);
@@ -123,7 +125,7 @@ const StepTwo = styled.div`
   align-items: center;
 `;
 const StepThree = styled.div`
-  width: 197px;
+  width: 27%;
   height: 90px;
   background: linear-gradient(154.49deg, #17b265 6.61%, #17b265 89.72%);
   box-shadow: 0px 10px 22px -2px rgba(23, 178, 101, 0.36);
@@ -145,7 +147,7 @@ const StepTitle = styled.div`
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;
-  width: 320px;
+  width: 100%;
 `;
 const StepDescription = styled.p`
   font-family: "Product Sans";
