@@ -52,6 +52,7 @@ export default function Navabar() {
             display={{ base: "flex", md: "none" }}
           >
             <IconButton
+              style={{ backgroundColor: "#fb4718" }}
               onClick={onToggle}
               icon={
                 isOpen ? (

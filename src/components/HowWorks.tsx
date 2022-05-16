@@ -61,6 +61,10 @@ const Description = styled.p`
   text-align: center;
   margin: auto;
   margin-top: 20px;
+
+  @media (max-width: 576px) {
+    width: auto;
+  }
 `;
 
 const StepContainer = styled.div`
@@ -69,6 +73,10 @@ const StepContainer = styled.div`
   justify-content: space-around;
   margin-top: 80px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+  @media (max-width: 576px) {
+    display: flex;
+  }
 `;
 const StepContent = styled.div``;
 const StepOne = styled.div`
