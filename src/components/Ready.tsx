@@ -82,7 +82,7 @@ function Ready() {
         return (
           <>
             <FormContainer>
-              <InputPhone
+              <InputName
                 type="text"
                 onChange={(e) =>
                   setFormData((prev) => ({
@@ -200,6 +200,12 @@ const Container = styled.div`
   height: 500px;
   margin: auto;
   padding: 100px;
+
+  @media (max-width: 576px) {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
 `;
 const Title = styled.h1`
   font-family: "Recoleta";
@@ -211,6 +217,10 @@ const Title = styled.h1`
   text-align: center;
   color: #ffffff;
   width: 587px;
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 `;
 const Description = styled.p`
   font-family: "Product Sans";
@@ -222,6 +232,10 @@ const Description = styled.p`
   text-align: center;
   margin: 20px auto auto;
   width: 45rem;
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 `;
 const CircleTop = styled.div`
   width: 225px;
@@ -231,6 +245,9 @@ const CircleTop = styled.div`
   border-radius: 50%;
   left: 5%;
   top: 77%;
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 const CircleBottom = styled.div`
   width: 225px;
@@ -239,11 +256,24 @@ const CircleBottom = styled.div`
   position: absolute;
   border-radius: 50%;
   left: 1127px;
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  flex-wrap: wrap;
+`;
+const InputName = styled.input`
+  padding: 15px 25px 15px 30px;
+  border-radius: 14px;
+  width: 350px;
+  margin-right: 10px;
+  color: #8a8f95;
+  font-family: "Product Sans";
+  margin-bottom: 5px;
 `;
 const InputPhone = styled.input`
   padding: 15px 25px 15px 103px;
@@ -252,6 +282,7 @@ const InputPhone = styled.input`
   margin-right: 10px;
   color: #8a8f95;
   font-family: "Product Sans";
+  margin-bottom: 5px;
 `;
 const btn = {
   width: "auto",
@@ -270,6 +301,11 @@ const Flag = styled.div`
   left: 32%;
   margin-top: 19px;
   border-radius: 50px;
+
+  @media (max-width: 576px) {
+    left: 10%;
+    margin-top: 12px;
+  }
 `;
 const Prefix = styled.span`
   position: absolute;
@@ -277,6 +313,10 @@ const Prefix = styled.span`
   margin-top: 23px;
   color: #8a8f95;
   font-family: "Product Sans";
+  @media (max-width: 576px) {
+    left: 19.4%;
+    margin-top: 15px;
+  }
 `;
 
 export default Ready;
