@@ -23,7 +23,7 @@ export default function Banner() {
                 color: "#FFFAF9",
               }}
             >
-              Hello! This is Autojob
+              Hello! C'est Autojob
             </Button>
           </Stack>
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
