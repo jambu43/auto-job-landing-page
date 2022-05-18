@@ -220,6 +220,7 @@ const Title = styled.h1`
 
   @media (max-width: 576px) {
     width: 100%;
+    font-size: 25px;
   }
 `;
 const Description = styled.p`
@@ -286,11 +287,12 @@ const InputPhone = styled.input`
 `;
 const btn = {
   width: "auto",
-  height: "70px",
+  height: "50px",
   background: "#ffffff",
   borderRadius: "14px",
   color: "#fa5e1e",
   marginLeft: "10px",
+  fontSize: "13px",
 };
 const Flag = styled.div`
   height: 30px;
